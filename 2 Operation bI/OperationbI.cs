@@ -31,7 +31,6 @@ namespace Test_Task
 			int someValue2 = 5;
 
 			string result = new Number(someValue1) + someValue2.ToString(_ifp);
-			//Можно было бы обойтись без жонглирования типами данных в 26 строке, но мне сказали трогать исключительно class Number ¯\_(ツ)_/¯
 			Console.WriteLine(result);
 			Console.ReadKey();
 		}
