@@ -10,12 +10,14 @@ class Program
 
 	static void Main(string[] args)
 	{
-		//Первое задание
+		/*//Первое задание
 		BreakMeCompletely.breakMeCompletely();
 		//Второе задание
 		Number.OperationbI();
+		//Третье задание
 		new[] { 1, 2, 3, 4 }.EnumerateFromTail(2);
-		SortTask.Sort(5, 15);
-
+		//Четвертое задание*/
+		int[] i = new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+		SortTask.Sort(i, 5, 15);
 	}
 }

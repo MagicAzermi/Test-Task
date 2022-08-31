@@ -18,7 +18,15 @@ namespace Test_Task._4
         public static IEnumerable<int> Sort(IEnumerable<int> inputStream, int sortFactor, int maxValue) 
         { 
             var sortList = new List<int>();
+            var maxNumber = inputStream.Max();
+            if (maxValue > 2000 && maxValue < 0 && maxValue > inputStream.Count()) 
+            {
+                return sortList;
+            }
+            sortList = inputStream.OrderBy(x => x).SkipWhile(x => x < maxNumber - sortFactor).ToList();
+
             return sortList;
+            //На сортировку потребовалось 12ms и потребление памяти возросло по сравнению с 19 строкой на 9,30 KB
         }
 
     }
