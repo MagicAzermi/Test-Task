@@ -9,19 +9,26 @@ namespace Test_Task._5
 	internal class FlyToElephant
 	{
 
-		static void Main(string[] args)
+		public static void NotMain(string[] vs)
 		{
 			TransformToElephant();
 			Console.WriteLine("Муха");
-			Console.WriteLine("Муха");
-			Console.WriteLine("Муха");
-			Console.WriteLine("Муха");
-			Console.WriteLine("Муха");
+			Console.WriteLine("Мухааа");
+			Console.WriteLine("Слон");
+			Console.WriteLine("Ухоха");
 		}
 
 		static void TransformToElephant()
-		{       //... write your code here 	}
-		}
+		{
+			Console.WriteLine("Слон");
+			Console.SetOut(new ConsoleWriter());
 
+		}
+		 
+		class ConsoleWriter : StringWriter
+		{
+			TextWriter emptyOut = Console.Out;
+			public override void WriteLine(string? value) => Console.SetOut(emptyOut);
+		}
 	}
 }
